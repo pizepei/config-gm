@@ -2,18 +2,19 @@
     "name": "pizepei/config-ng",
     "description": "config",
     "keywords": ["config"],
+    "homepage": "https://org.heil.top/",
     "authors": [
-        {
-            "name": "pizepei",
-            "email": "pizepei@pizepei.com"
-        }
-    ],
-    "require": {
-        "php": ">=7.0.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "pizepei\\config\\": "/"
-        }
-    }
+          {
+              "name": "pizepei",
+              "email": "pizepei@pizepei.com"
+          }
+      ],
+      "require": {
+          "php": ">=7.0.0"
+      },
+      "autoload": {
+          "psr-4": {
+              "pizepei\\config\\": "/"
+          }
+      }
 }
