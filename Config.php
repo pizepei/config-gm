@@ -27,9 +27,26 @@ class Config
              */
             'CacheTypeDir'=>'',
 
+        ],
+        /**
+         * 初始化
+         */
+        'init' =>[
+            /**
+             * 命名空间
+             */
+            'appname' =>'app',
+            /**
+             * 模式
+             */
+            'pattern' =>'exploit',
+        ],
+        /**
+         * 路由配置
+         */
+        'route' => [
+            'expanded' => '.html',
         ]
-
-
     ];
 
 
