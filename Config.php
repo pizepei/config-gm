@@ -40,12 +40,29 @@ class Config
              * 模式
              */
             'pattern' =>'exploit',
+            /**
+             * 自定义define配置目录
+             */
+            'define' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'define.php',
+            /**
+             * 控制器return默认数据类型
+             * json
+             * html
+             */
+            'return' => 'json'
         ],
         /**
          * 路由配置
          */
         'route' => [
-            'expanded' => '.html',
+            /**
+             * 路由后缀名  比如 .html
+             */
+            'expanded' => '',
+            /**
+             * 自定义路由保存目录
+             */
+            'file_dir' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'route',
         ]
     ];
 
