@@ -19,11 +19,11 @@ class Dbtabase
         // 数据库连接DSN配置
         'dsn'         => '',
         // 服务器地址
-        'hostname'    => '',
+        'hostname'    => 'rm',
         // 数据库名
-        'database'    => 'oauth_module',
+        'database'    => 'oauth',
         // 数据库用户名
-        'username'    => 'oauth_module',
+        'username'    => 'oauth',
         // 数据库密码
         'password'    => '',
         // 数据库连接端口

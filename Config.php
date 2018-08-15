@@ -63,7 +63,24 @@ class Config
              * 自定义路由保存目录
              */
             'file_dir' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'route',
-        ]
+        ],
+        /**
+         *API
+         */
+    ];
+
+    /**
+     * API配置
+     */
+    CONST API_CONFIG = [
+        /**
+         * 判断ip地址查询接口
+         */
+        'BaiduIp' =>[
+            'url'=>'',
+            'Key'=>'',
+        ],
+
     ];
 
 
