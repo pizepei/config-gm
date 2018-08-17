@@ -26,7 +26,6 @@ class Config
              *缓存类型目录
              */
             'CacheTypeDir'=>'',
-
         ],
         /**
          * 初始化
@@ -38,6 +37,8 @@ class Config
             'appname' =>'app',
             /**
              * 模式
+             * exploit调试
+             *
              */
             'pattern' =>'exploit',
             /**
@@ -49,7 +50,19 @@ class Config
              * json
              * html
              */
-            'return' => 'json'
+            'return' => 'json',
+            /**
+             * 自定义响应
+             */
+            'header'=>[
+                'X-Powered-By'=>'ASP.NET',
+                'Server'=>'Apache/2.4.23 (Win32) OpenSSL/1.0.2j mod_fcgid/2.3.9',
+                /**
+                 * 或者 text/html; charset=UTF-8
+                 */
+                'Content-Type'=>'application/json;charset=UTF-8',
+            ],
+
         ],
         /**
          * 路由配置
