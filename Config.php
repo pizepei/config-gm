@@ -60,22 +60,44 @@ class Config
                 /**
                  * 或者 text/html; charset=UTF-8
                  */
+                //'Content-Type'=>'text/html; charset=UTF-8',
+
                 'Content-Type'=>'application/json;charset=UTF-8',
             ],
-
+            /**
+             * 是否对请求参数进行过滤（删除不在注解中的参数key）
+             */
+            'requestParam'=>true,
+            /**
+             * 请求过来的xml 数据层级 限制（防止攻击）
+             */
+            'requestParamTier'=>50,
         ],
         /**
          * 路由配置
          */
         'route' => [
             /**
-             * 路由后缀名  比如 .html
+             * 路由类型
+             * note 注解
+             * file 常规
+             */
+            'type' =>'note',
+            /**
+             * 路由后缀名  比如 .html(note 注解时不可用)
              */
             'expanded' => '',
             /**
              * 自定义路由保存目录
              */
             'file_dir' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'route',
+            /**
+             * ReturnSubjoin
+             */
+            'ReturnSubjoin'=>[
+
+            ],
+
         ],
         /**
          *API
