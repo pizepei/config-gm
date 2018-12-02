@@ -20,7 +20,9 @@ class JsonWebTokenConfig
          * name 名字 value 密钥   role 角色标识  alg 加密方法  Payload 内容
          * 密钥代表的等级
          */
-        'common'=>['name'=>'普通权限','value'=>'abcd123343', 'alg'=>'md5','role'=>'common','Payload'=>'common'],
+        'common'=>[
+            'name'=>'普通权限','value'=>'abcd123343', 'alg'=>'md5','role'=>'common','Payload'=>'common'
+        ],
         'base'=>['name'=>'管理员','value'=>'', 'alg'=>'md5','role'=>''],
         'visitor'=>['name'=>'游客','value'=>'', 'alg'=>'md5','role'=>''],
     ];
