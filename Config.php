@@ -97,6 +97,10 @@ class Config
             'ReturnSubjoin'=>[
 
             ],
+            /**
+             * 默认 \ 路由的路径-》已经存在的注解地址
+             */
+            'index'=>'index.html',
 
         ],
         /**
