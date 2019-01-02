@@ -72,6 +72,10 @@ class Config
              * 请求过来的xml 数据层级 限制（防止攻击）
              */
             'requestParamTier'=>50,
+            /**
+             *是否开启获取客户端详情true
+             */
+            'clientInfo'=>false,
         ],
         /**
          * 路由配置
