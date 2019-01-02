@@ -76,6 +76,22 @@ class Config
              *是否开启获取客户端详情true
              */
             'clientInfo'=>false,
+            /**
+             *设置返回信息内容(非开发模式下)
+             */
+            'SYSTEMSTATUS'=>[
+                'controller',//路由控制器
+                'function_method',// 请求方法 get post
+                'request_method',//控制器方法
+                'request_url',//完整路由（去除域名的url地址）
+                'route',//解释路由
+                'sql',//历史slq
+                'clientInfo',//ip信息
+                '系统开始时的内存(K)',//系统状态
+                '系统结束时的内存(KB)',
+                '系统内存峰值(KB)',
+                '执行耗时(S)',
+            ],
         ],
         /**
          * 路由配置
