@@ -21,13 +21,13 @@ class Dbtabase
         // 数据库连接DSN配置
         'dsn'         => '',
         // 服务器地址
-        'hostname'    => '',
+        'hostname'    => 'rm-wz9ke0lw1c58g4f88ho.mysql.rds.aliyuncs.com',
         // 数据库名
         'database'    => 'oauth_module',
         // 数据库用户名
-        'username'    => 'oauth_module',
+        'username'    => 'develop',
         // 数据库密码
-        'password'    => '',
+        'password'    => 'develop',
         // 数据库连接端口
         'hostport'    => '3306',
         // 数据库连接参数  参考资料http://php.net/manual/zh/pdo.setattribute.php
