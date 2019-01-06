@@ -40,7 +40,7 @@ class Config
              * exploit调试
              *
              */
-            'pattern' =>'exploit',
+            'pattern' =>'',
             /**
              * 自定义define配置目录
              */
@@ -51,6 +51,11 @@ class Config
              * html
              */
             'return' => 'json',
+
+            /**
+             *index示图入口文件（单页应用）
+             */
+            'index-view'=>'./layuiAdmin.pro-v1.2.1/start/index.html',
             /**
              * 自定义响应
              */
