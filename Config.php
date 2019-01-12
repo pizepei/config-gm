@@ -40,7 +40,7 @@ class Config
              * exploit调试
              *
              */
-            'pattern' =>'',
+            'pattern' =>'exploit',
             /**
              * 自定义define配置目录
              */

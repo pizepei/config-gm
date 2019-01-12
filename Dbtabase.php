@@ -88,6 +88,10 @@ class Dbtabase
         'persistent' => true,
         //实例化模式 true 重复使用对象  false 创建新对象
         'setObjectPattern'=>true,
+         //生成uuid方法 false db模型生成   true 为数据库uuid()函数生成  高并发分布式建议 false
+        'uuid'=>false,
+         //本服务的uuid标识（分布式时可保证不同服务之间的空间唯一）
+        'uuid_identifier'=>'test-1',
     ];
 
 }
