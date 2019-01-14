@@ -67,7 +67,7 @@ class Config
                  */
                 'Content-Type'=>'text/html; charset=UTF-8',
 
-                //'Content-Type'=>'application/json;charset=UTF-8',
+                'Content-Type'=>'application/json;charset=UTF-8',
             ],
             /**
              * 是否对请求参数进行过滤（删除不在注解中的参数key）
