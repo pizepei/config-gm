@@ -13,6 +13,24 @@ namespace pizepei\config;
 class Dbtabase
 {
 
+    /**
+     * 数据库配置建议
+     *
+    STRICT_TRANS_TABLES：
+    在该模式下，如果一个值不能插入到一个事务表中，则中断当前的操作，对非事务表不做任何限制
+
+    NO_ZERO_DATE
+     * 在严格模式，不要将 '0000-00-00'做为合法日期。你仍然可以用IGNORE选项插入零日期。在非严格模式，可以接受该日期，但会生成警告
+     *
+     *NO_ENGINE_SUBSTITUTION
+     * 如果需要的存储引擎被禁用或未编译，那么抛出错误。不设置此值时，用默认的存储引擎替代，并抛出一个异常
+     *
+     *STRICT_ALL_TABLES
+     * 如果插入执行失败会保存错误发生之前插入的行，忽略剩下的行，并报错。
+     */
+
+
+
     const DBTABASE = [
         // 数据库类型
         'type'        => 'mysql',
