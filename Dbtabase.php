@@ -110,6 +110,11 @@ class Dbtabase
         'initTablePattern'=>true,
          //本服务的uuid标识（分布式时可保证不同服务之间的空间唯一）
         'uuid_identifier'=>'test-1',
+        /**
+         * 缓存有效期（默认的bd类缓存时间如表结构信息）单位s   0为永久
+         */
+        'cachePeriod'     =>30,
+
     ];
 
 }
