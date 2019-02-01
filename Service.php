@@ -17,23 +17,38 @@ class Service
      */
     CONST SMS =[
         /**
+         * 默认使用的
+         */
+        'default'=>'Aliyun',
+        /**
          * 阿里云
          */
         'Aliyun'=>[
+            /**
+             * 通道名称（类名）
+             */
+            'aisleName'=>'Aliyun',
 
             'accessKeyId'=>'',
 
             'accessKeySecret'=>'',
             //地区
             'RegionId'=>'cn-hangzhou',
-            /**
-             * 签名名称
-             */
-            'SignName'=>'',
-            //模板id
-            'TemplateCode'=>'',
-            //模式
+
+            //模式 注册
             'pattern'=>[
+
+                'register'=>[
+                        /**
+                         * 签名名称
+                         */
+                        'SignName'=>'',
+                        //模板id
+                        'TemplateCode'=>'',
+                        'parameter'=>[
+                            'code'=>'验证码',
+                            ],
+                    ],
 
             ],
         ],
