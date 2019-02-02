@@ -41,14 +41,8 @@ class InitializeConfig
         $Config =[];
         foreach(self::configName as $key=>$value){
             $reflect = new \ReflectionClass('pizepei\config\\'.$value);
-            $reflect->getConstants();
             $Config = array_merge_recursive($Config, $reflect->getConstants());
         }
-        //class_exists('config/'.__APP__.'Config');
-        //SetConfig::API_CONFIG;
-        //var_dump(class_exists('config/'.__APP__.'/SetConfig'));
-        $Config = array_merge($Config);
-
 
         return $Config;
     }
@@ -61,38 +55,56 @@ class InitializeConfig
         $Config =[];
         foreach(self::Dbtabase as $key=>$value){
             $reflect = new \ReflectionClass('pizepei\config\\'.$value);
-            $reflect->getConstants();
             $Config = array_merge_recursive($Config, $reflect->getConstants());
         }
         return $Config;
     }
 
     /**
-     * 设置配置
+     * 获取配置(自定义)
+     * @return mixed
      */
-    public function set_config($name,$data,$path)
+    public function get_const($name)
+    {
+        $reflect = new \ReflectionClass($name);
+        return $reflect->getConstants();
+    }
+
+    /**
+     * 设置配置
+     * @param $name
+     * @param $data
+     * @param $path
+     * @param $namespace
+     */
+    public function set_config($name,$data,$path,$namespace = '')
     {
         //写入文件
         $str = '';
-        $this->set_head($str,$name);
+        $this->set_head($str,$name,$namespace);
         $this->set_content($data,$str);
         Func:: M('file') ::createDir($path);
-
         file_put_contents($path.$name.'.php',$str);
-
-        //mkdir()
-
+        //mkdir($path.$name.'.php',0777);
     }
+
     /**
      * 设置文件头部
+     * @param $str
+     * @param $name
+     * @param $namespace
      */
-    public function set_head(&$str,$name)
+    public function set_head(&$str,$name,$namespace)
     {
         $str = '<?php'.PHP_EOL;
         $str .= '/**'.PHP_EOL;
         $str .= ' * creationTime: '.date('Y-m-d H:i:s').PHP_EOL;
         $str .= ' * @title: 基础配置文件'.PHP_EOL;
         $str .= ' */'.PHP_EOL.PHP_EOL.PHP_EOL;
+        if(!empty($namespace)){
+            $str .= ' namespace '.$namespace.';'.PHP_EOL.PHP_EOL.PHP_EOL;
+        }
+
         $str .= 'class '.$name.PHP_EOL;
         $str .= '{ '.PHP_EOL;
     }
@@ -101,6 +113,14 @@ class InitializeConfig
         foreach($data as $key=>$vla){
             if(is_array($vla)){
                 $str .= '    const '.$key.' = '.static::arrayToString($vla,1).';'.PHP_EOL.PHP_EOL;
+            }else if(is_bool($vla)){
+                if($vla){
+                    $str .= '    const '.$key.' = '.TRUE.';'.PHP_EOL.PHP_EOL;
+                }else{
+                    $str .= '    const '.$key.' = '.FALSE.';'.PHP_EOL.PHP_EOL;
+                }
+            }else if(is_string($vla)){
+                    $str .= '    const '.$key.' = "'.$vla.'";'.PHP_EOL.PHP_EOL;
             }
         }
         $str .=PHP_EOL.PHP_EOL.'}';
