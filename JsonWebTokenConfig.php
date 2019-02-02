@@ -15,7 +15,7 @@ class JsonWebTokenConfig
     /**
      * 密钥 数组
      */
-    CONST secret =[
+    CONST JSON_WEB_TOKEN_SECRET =[
         /**
          * name 名字 value 密钥   role 角色标识  alg 加密方法  Payload 内容
          * 密钥代表的等级
@@ -29,20 +29,20 @@ class JsonWebTokenConfig
     /**
      * 对应的权限（secret  role ）
      */
-    CONST role = [
+    CONST JSON_WEB_TOKEN_ROLE = [
         'common'=>[],
     ];
     /**
      * Header
      */
-    CONST Header = [
+    CONST JSON_WEB_TOKEN_HEADER = [
         'alg'=>'md5',//加密方法（默认MD5 一般根据secret 的alg设置）
         'typ'=>'JWT',//签名类型
     ];
     /**
      *jwtPayload
      */
-    CONST Payload = [
+    CONST JSON_WEB_TOKEN_PAYLOAD = [
         'common'=>[
             'iss'=>'server',//签发人
             'exp'=>7200,//过期时间s
@@ -53,6 +53,6 @@ class JsonWebTokenConfig
             'jti'=>'',//编号(随机数)
         ],
     ];
-    CONST token_name = 'token';
+    CONST JSON_WEB_TOKEN_NAME = 'token';
 
 }
