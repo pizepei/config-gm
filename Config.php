@@ -94,6 +94,37 @@ class Config
             ],
             //本服务的uuid标识（分布式时可保证不同服务之间的空间唯一）
             'uuid_identifier'=>'test-1',
+            /**
+             * 成功返回格式
+             */
+            'SuccessReturnsJsonCode'=>[
+                'name'=>'code',
+                'value'=>200,
+            ],
+            'errorReturnJsonCode'=>[
+                'name'=>'code',
+                'value'=>100,
+            ],
+            /**
+             * 错误返回公司
+             */
+            'SuccessReturnJsonMsg'=>[
+                'name'=>'msg',
+                'value'=>'success',
+            ],
+            'errorReturnJsonMsg'=>[
+                'name'=>'msg',
+                'value'=>'error',
+            ],
+            /**
+             * 返回的数据总体
+             */
+            'ReturnJsonData'=>'data',
+            /**
+             * 返回的数据数量
+             */
+            'ReturnJsonCount'=>'count',
+
         ],
         /**
          * 路由配置
