@@ -101,18 +101,18 @@ class Config
                 'name'=>'code',
                 'value'=>200,
             ],
-            'errorReturnJsonCode'=>[
+            'ErrorReturnJsonCode'=>[
                 'name'=>'code',
                 'value'=>100,
             ],
             /**
-             * 错误返回公司
+             * 错误返回格式
              */
             'SuccessReturnJsonMsg'=>[
                 'name'=>'msg',
                 'value'=>'success',
             ],
-            'errorReturnJsonMsg'=>[
+            'ErrorReturnJsonMsg'=>[
                 'name'=>'msg',
                 'value'=>'error',
             ],

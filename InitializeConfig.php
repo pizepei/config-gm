@@ -43,7 +43,6 @@ class InitializeConfig
             $reflect = new \ReflectionClass('pizepei\config\\'.$value);
             $Config = array_merge_recursive($Config, $reflect->getConstants());
         }
-
         return $Config;
     }
     /**
