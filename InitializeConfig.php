@@ -31,19 +31,19 @@ class InitializeConfig
     const Dbtabase = [
         'Dbtabase',
     ];
-
+    /**
+     * 错误与日志配置
+     */
+    const ErrorOrLog = [
+        'ErrorOrLogConfig',
+    ];
     /**
      * 获取配置
      * @return mixed
      */
     public function get_config_const()
     {
-        $Config =[];
-        foreach(self::configName as $key=>$value){
-            $reflect = new \ReflectionClass('pizepei\config\\'.$value);
-            $Config = array_merge_recursive($Config, $reflect->getConstants());
-        }
-        return $Config;
+        return $this->get_foreach_const(self::configName);
     }
     /**
      * 获取配置
@@ -51,8 +51,29 @@ class InitializeConfig
      */
     public function get_dbtabase_const()
     {
+        return $this->get_foreach_const(self::Dbtabase);
+    }
+    /**
+     * 获取配置 错误与日志配置
+     * @return mixed
+     */
+    public function get_error_log_const()
+    {
+        return $this->get_foreach_const(self::ErrorOrLog);
+    }
+    /**
+     * @Author pizepei
+     * @Created 2019/2/16 15:34
+     * @param $data
+     * @return array
+     * @throws \ReflectionException
+     * @title  批量获取日志
+     *
+     */
+    public function get_foreach_const($data)
+    {
         $Config =[];
-        foreach(self::Dbtabase as $key=>$value){
+        foreach($data as $key=>$value){
             $reflect = new \ReflectionClass('pizepei\config\\'.$value);
             $Config = array_merge_recursive($Config, $reflect->getConstants());
         }

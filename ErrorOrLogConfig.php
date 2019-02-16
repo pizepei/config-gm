@@ -9,7 +9,7 @@
 namespace pizepei\config;
 
 
-class ErrorCodeConfig
+class ErrorOrLogConfig
 {
     /**
      * 友善提示
