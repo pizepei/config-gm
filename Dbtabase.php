@@ -114,7 +114,15 @@ class Dbtabase
          * 缓存有效期（默认的bd类缓存时间如表结构信息）单位s   0为永久
          */
         'cachePeriod'     =>30,
-
+        'safety'=>[
+            /**
+             * 删除过滤
+             */
+            'del'=>[
+                ['/[Dd][Rr][Oo][Pp][\s]+[Dd][Aa][Tt][Aa][Bb][Aa][Ss][Ee][\s]+/s','非法操作DROP DATABASE'],//过滤删除数据库sql
+                ['/[Dd][Rr][Oo][Pp][\s]+[Tt][Aa][Bb][Ll][Ee][\s]+/s','非法操作DROP TABLE'],//过滤删除表sql
+            ]
+        ]
     ];
 
 }
