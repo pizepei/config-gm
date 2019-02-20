@@ -176,5 +176,48 @@ class Config
     ];
 
 
+    /**
+     * 微信相关配置
+     */
+    CONST WECHAT_CONFIG = [
+        /**
+         * 开发者没事配置
+         */
+        'alone'=>[
+            'APPID'=>'',
+            'APPSECRET'=>'',
+            'token'=>'',
+            'encodingAesKey'=>'',
+            'cache_type'=> 'redis',//自定义 微信token存储方式 支持  redis  file
+            'cache_keyword_type'=> 'mysql',//自定义 关键字  存储方式 支持  redis  mysql
+            'prefix'   => 'wechat_', // 缓存名称前缀
+         ],
+        /**
+         * 第三方平台模式配置
+         */
+        'third'=>[
+            'APPID'=>'',
+            'APPSECRET'=>'',
+            'token'=>'',
+            'encodingAesKey'=>'',
+            'cache_type'=> 'redis',//自定义 微信token存储方式 支持  redis  file
+            'cache_keyword_type'=> 'mysql',//自定义 关键字  存储方式 支持  redis  mysql
+            'prefix'   => 'wechat_', // 缓存名称前缀
+         ],
+        /**
+         * 基础配置
+         */
+        'basics'=>[
+
+
+        ]
+
+
+
+
+
+    ];
+
+
 
 }
