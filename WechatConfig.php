@@ -13,6 +13,7 @@ class WechatConfig
 {
     //开放平台微信接口配置
     const OPEN_WECHAT_CONFIG = [
+        'pattern'=>'third',//
         'appid'=>'',
         'appsecret'=>'',
         'encodingAesKey'=>'',
@@ -22,6 +23,7 @@ class WechatConfig
      * 微信相关配置  开发者配置
      */
     CONST WECHAT_CONFIG = [
+        'pattern'=>'tradition',//third 第三方  tradition 传统模式
         'APPID'=>'',
         'APPSECRET'=>'',
         'token'=>'',
