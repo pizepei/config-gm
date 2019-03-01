@@ -24,6 +24,7 @@ class InitializeConfig
         'JsonWebTokenConfig',
         'Service',
         'TerminalInfoConfig',
+        'WechatConfig',
     ];
     /**
      * 数据库配置名称
