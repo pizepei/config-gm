@@ -17,7 +17,8 @@ class WechatConfig
         'appid'=>'',
         'appsecret'=>'',
         'encodingAesKey'=>'',
-        'token'=>''
+        'token'=>'',
+        'prefix'   => 'wechat_third', // 缓存名称前缀
     ];
     /**
      * 微信相关配置  开发者配置
@@ -30,6 +31,6 @@ class WechatConfig
         'encodingAesKey'=>'',
         'cache_type'=> 'redis',//自定义 微信token存储方式 支持  redis  file
         'cache_keyword_type'=> 'mysql',//自定义 关键字  存储方式 支持  redis  mysql
-        'prefix'   => 'wechat_', // 缓存名称前缀
+        'prefix'   => 'wechat_tradition', // 缓存名称前缀
     ];
 }
