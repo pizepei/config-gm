@@ -24,8 +24,8 @@ class WechatConfig
      */
     CONST WECHAT_CONFIG = [
         'pattern'=>'tradition',//third 第三方  tradition 传统模式
-        'APPID'=>'',
-        'APPSECRET'=>'',
+        'appid'=>'',
+        'appsecret'=>'',
         'token'=>'',
         'encodingAesKey'=>'',
         'cache_type'=> 'redis',//自定义 微信token存储方式 支持  redis  file
