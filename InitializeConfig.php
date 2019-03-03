@@ -17,7 +17,7 @@ class InitializeConfig
 {
 
     /**
-     * 配置名称
+     * 需要的配置名称(类名称)
      */
     const configName = [
         'Config',
@@ -25,6 +25,7 @@ class InitializeConfig
         'Service',
         'TerminalInfoConfig',
         'WechatConfig',
+        'RedsiConfig',
     ];
     /**
      * 数据库配置名称
