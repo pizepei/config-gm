@@ -18,6 +18,12 @@ class TerminalInfoConfig
     CONST  TERMINAL_INFO_PATTERN = 'high';
 
     /**
+     *   direct 直连   cdn 官方cnd   代理 agency
+     */
+    CONST TERMINAL_IP_PATTERN = 'cdn';
+
+
+    /**
      * API配置
      */
     CONST TERMINAL_INFO_API_CONFIG = [
