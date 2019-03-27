@@ -160,7 +160,13 @@ class Config
          *API
          */
     ];
-
+    CONST ACCOUNT =[
+      'password_regular'=>'/^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*? ]).*$/',//密码正则表达式
+      'number_count'=>20,//会员编号参数
+      'algo'=>PASSWORD_BCRYPT,//password_hash 参数
+      'options'=>['cost'=>10],//password_hash 参数
+      'logon_token_salt'=>22,//logon_token_salt 长度
+    ];
     /**
      * API配置
      */
