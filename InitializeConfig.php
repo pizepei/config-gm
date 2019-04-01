@@ -26,6 +26,7 @@ class InitializeConfig
         'TerminalInfoConfig',
         'WechatConfig',
         'RedsiConfig',
+        'FilesUploadConfig',
     ];
     /**
      * 数据库配置名称
