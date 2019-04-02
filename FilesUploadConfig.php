@@ -27,8 +27,9 @@ class FilesUploadConfig
             'appid'=>'asdkjlk3434df674545l',//以appid为分组名称  （目录名称）
             'AppSecret'=>'asdkjlsssfk3434df67455656345l',
             'domain'=>[
-                'oauth.heil.top',
-            ],//支持的来源域名
+                '/^http:\/\/[A-Za-z0-9_-]+.oauth.heil.top/S',//通配符域名
+                '/^http:\/\/oauth.heil.top/S',//标准域名
+            ],//支持的来源域名  正则表达式
     ];
     /**
      * 模式
