@@ -3,11 +3,7 @@
  * @Author: pizepei
  * @ProductName: PhpStorm
  * @Created: 2019/4/1 22:25
- * @baseAuth 基础权限继承（加命名空间的类名称）
- * @title 简单的dome
- * @authGroup [user:用户相关,admin:管理员相关] 权限组列表
- * @basePath /dome/
- * @baseParam [$Request:pizepei\staging\Request] 注册依赖注入对象
+ * @title 文件上传配置
  */
 
 namespace pizepei\config;
@@ -26,6 +22,8 @@ class FilesUploadConfig
     CONST FILES_UPLOAD_APP = [
             'appid'=>'asdkjlk3434df674545l',//以appid为分组名称  （目录名称）
             'AppSecret'=>'asdkjlsssfk3434df67455656345l',
+            'token'=>'68uijkmsd454lfgjuwynvcv@',
+            'period'=>20,//分钟单位
             'domain'=>[
                 '/^http:\/\/[A-Za-z0-9_-]+.oauth.heil.top/S',//通配符域名
                 '/^http:\/\/oauth.heil.top/S',//标准域名
