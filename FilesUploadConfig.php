@@ -20,14 +20,21 @@ class FilesUploadConfig
      *      文件被上传时 会根据域名创建目录（分布式可同时上传到所有服务器上）    在被请求时由nginx获取域名定位到域名目录下（没有绑定域名的就没有目录了）
      */
     CONST FILES_UPLOAD_APP = [
-            'appid'=>'asdkjlk3434df674545l',//以appid为分组名称  （目录名称）
-            'AppSecret'=>'asdkjlsssfk3434df67455656345l',
-            'token'=>'68uijkmsd454lfgjuwynvcv@',
-            'period'=>20,//分钟单位
-            'domain'=>[
-                '/^http:\/\/[A-Za-z0-9_-]+.oauth.heil.top/S',//通配符域名
-                '/^http:\/\/oauth.heil.top/S',//标准域名
-            ],//支持的来源域名  正则表达式
+        'asdkjlk3434df674545l'=>[
+                'appid'=>'asdkjlk3434df674545l',//以appid为分组名称  （目录名称）
+                'AppSecret'=>'asdkjlsssfk3434df67455656345l',
+                'token'=>'68uijkmsd454lfgjuwynvcv@',
+                'period'=>20,//分钟单位
+                'request_domain'=>[
+                    '/^http:\/\/[A-Za-z0-9_-]+.oauth.heil.top/S',//通配符域名
+                    '/^http:\/\/oauth.heil.top/S',//标准域名
+                ],//支持的来源域名  正则表达式
+                'show_domain'=>[
+                    'http://oauth.heil.top',
+                    'https://oauth.heil.top',
+                ],
+                'catalogue'=>'..'.DIRECTORY_SEPARATOR.'public'.DIRECTORY_SEPARATOR.'files_upload'.DIRECTORY_SEPARATOR,//文件根目录
+            ]
     ];
     /**
      * 模式
