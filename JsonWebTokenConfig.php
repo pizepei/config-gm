@@ -31,6 +31,7 @@ class JsonWebTokenConfig
                 'sig'=>'md5',//签名方法（默认MD5 一般根据secret 的alg设置）可选sha1
                 'typ'=>'JWT',//签名类型
                 'appid'=>'ashaaasd1232jjdskhkkx',//必须
+                'number'=>'',//用户编号（尽可能的对外隐藏uuid）
             ],
             'Payload'=>[//jwtPayload
                         'iss'=>'server',//签发人
