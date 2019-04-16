@@ -43,4 +43,7 @@ class ErrorOrLogConfig
     const USE_CUSTOM =[
         'USE'=>[1,3,'应用开发级别错误'],
     ];
+    /**
+     * 每个
+     */
 }
