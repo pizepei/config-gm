@@ -44,6 +44,15 @@ class ErrorOrLogConfig
         'USE'=>[1,3,'应用开发级别错误'],
     ];
     /**
-     * 每个
+     * 每个Exception
+     * 第一个是开发时增加提示的，code是生产时主要使用的
+     *
+     * 当然开发时出现错误  会同时 返回 masg   code  code对应的ErrorOrLogConfig配置信息
+     *
+     * 生产时出现错误时 masg不会输出  只输出code 和 code对应的ErrorOrLogConfig配置信息（如果没有配置就使用默认错误提示）
+     *
+     * 系统 错误代码  10000-49999
+     *
+     * 应用 错误代码  50000-99999
      */
 }
