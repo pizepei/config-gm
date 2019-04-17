@@ -28,8 +28,11 @@ class ErrorOrLogConfig
         3=>'去联系管理员！',
         4=>'请截图联系客服！',
     ];
+    const CODE_DISTRICT = [
+
+    ];
     /**
-     * 系统框架
+     * 系统框架10000-49999
      *
      * 友善提示【错误代码】
      */
@@ -38,7 +41,7 @@ class ErrorOrLogConfig
         'SYS'=>[1,3,'一个系统错误'],
     ];
     /**
-     * 应用自定义
+     * 应用自定义50000-99999
      */
     const USE_CUSTOM =[
         'USE'=>[1,3,'应用开发级别错误'],
@@ -49,7 +52,7 @@ class ErrorOrLogConfig
      *
      * 当然开发时出现错误  会同时 返回 masg   code  code对应的ErrorOrLogConfig配置信息
      *
-     * 生产时出现错误时 masg不会输出  只输出code 和 code对应的ErrorOrLogConfig配置信息（如果没有配置就使用默认错误提示）
+     * 生产时出现错误时 masg不会输出  只输出codeCipher（随机生成的） 和 code对应的ErrorOrLogConfig配置错误提示信息（如果没有配置就使用默认错误提示）
      *
      * 系统 错误代码  10000-49999
      *
