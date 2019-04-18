@@ -23,7 +23,7 @@ class JsonWebTokenConfig
             'name'=>'普通权限',
             'secret'=>'abcd123343',
             'secret_key'=>'sakjshkjkljm889289023dscponbxba3242903902ijkds',//Header alg 为 aes 时需要
-            'token_name'=>'token',
+            'token_name'=>'access_token',
             'alg'=>'md5',
             'role'=>'common',
             'Header'=>[
