@@ -125,6 +125,15 @@ class Config
              */
             'ReturnJsonCount'=>'count',
 
+            /**
+             * 没有权限
+             */
+            'jurisdictionCode'=>40003,
+
+            /**
+             * 没有登录
+             */
+            'notLoggedCode'=>10001,
         ],
         /**
          * 路由配置
