@@ -102,13 +102,11 @@ class InitializeConfig
      */
     public function set_config($name,$data,$path,$namespace = '')
     {
-        var_dump($data);
         //写入文件
         $str = '';
         $this->set_head($str,$name,$namespace);
         $this->set_content($data,$str);
         Func:: M('file') ::createDir($path);
-        //var_dump($str);
         file_put_contents($path.$name.'.php',$str);
         //mkdir($path.$name.'.php',0777);
     }

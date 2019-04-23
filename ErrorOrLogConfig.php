@@ -11,6 +11,19 @@ namespace pizepei\config;
 
 class ErrorOrLogConfig
 {
+
+    /**
+     * 无权限权限状态码
+     */
+    const JURISDICTION_CODE = 40003;
+    /**
+     * 没有登录状态码
+     */
+    const NOT_LOGGOD_IN_CODE = 10001;
+    /**
+     * 登录
+     */
+
     /**
      * 友善提示
      */
