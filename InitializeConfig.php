@@ -40,25 +40,34 @@ class InitializeConfig
     const ErrorOrLog = [
         'ErrorOrLogConfig',
     ];
+
     /**
      * 获取配置
+     *
      * @return mixed
+     * @throws \ReflectionException
      */
     public function get_config_const()
     {
         return $this->get_foreach_const(self::configName);
     }
+
     /**
      * 获取配置
+     *
      * @return mixed
+     * @throws \ReflectionException
      */
     public function get_dbtabase_const()
     {
         return $this->get_foreach_const(self::Dbtabase);
     }
+
     /**
      * 获取配置 错误与日志配置
+     *
      * @return mixed
+     * @throws \ReflectionException
      */
     public function get_error_log_const()
     {
@@ -85,7 +94,10 @@ class InitializeConfig
 
     /**
      * 获取配置(自定义)
+     *
+     * @param $name
      * @return mixed
+     * @throws \ReflectionException
      */
     public function get_const($name)
     {
