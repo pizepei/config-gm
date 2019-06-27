@@ -40,6 +40,23 @@ class InitializeConfig
     const ErrorOrLog = [
         'ErrorOrLogConfig',
     ];
+    /**
+     * 部署配置
+     */
+    const Deploy = [
+        'Deploy',
+    ];
+
+
+    /**
+     * 获取配置
+     * @return mixed
+     * @throws \ReflectionException
+     */
+    public function get_deploy_const()
+    {
+        return $this->get_foreach_const(self::Deploy);
+    }
 
     /**
      * 获取配置
@@ -207,7 +224,7 @@ class InitializeConfig
             }
             $content .= ($index? ',': '')."\n";
         }
-        $content .= str_repeat($space, $level - 1)."]";
+        $content .= str_repeat($space, $level - 1)."    ]";
 
         return $content;
     }
