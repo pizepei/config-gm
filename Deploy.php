@@ -24,6 +24,12 @@ class Deploy
         'pubkey'=>'',//这里的公钥对不是必须为当前用户的
         'prikey'=>'',//
     ];
+    /**
+     * gitlb相关配置
+     */
+    CONST GITLAB = [
+        'HTTP_X_GITLAB_TOKEN'=>'',//gitlab  SystemHooks TOKEN
+    ];
 
     /**
      * 初始化配置 获取配置参数
