@@ -27,9 +27,14 @@ class Deploy
 
     /**
      * 初始化配置 获取配置参数
+     * 项目本身通过本配置向配置中心获取租客的配置（包括saas模式下的配置获取）
+     * initialize
      */
-    CONST initialize = [
-
+    CONST INITIALIZE = [
+        'configCenter'=>'',//配置中心地址（配置中心设在ip白名单）
+        'appid'=>'appid76372843924923894',//服务appid
+        'AppSecret'=>'asdkj346fk3434df67455656345l',//加密参数
+        'token'=>'68uijkmsd454lfgnvcv@',//签名使用
     ];
 
 
