@@ -13,6 +13,18 @@ namespace pizepei\config;
 class Deploy
 {
     /**
+     * 获取配置的方式
+     * ConfigCenter   远程配置中心
+     * Local   本地配置
+     */
+    CONST toLoadConfig = 'ConfigCenter';
+
+    /**
+     * 是否调试模式
+     */
+    CONST __EXPLOIT__ = 1;
+
+    /**
      * 构建服务器配置
      */
     CONST buildServer = [
