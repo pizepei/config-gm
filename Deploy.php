@@ -51,7 +51,7 @@ class Deploy
     CONST INITIALIZE = [
         'configCenter'=>'',//配置中心地址（配置中心设在ip白名单）
         'appid'=>'appid76372843924923894',//服务appid
-        'AppSecret'=>'asdkj346fk3434df67455656345l',//加密参数
+        'appSecret'=>'asdkj346fk3434df67455656345l',//加密参数
         'token'=>'68uijkmsd454lfgnvcv@',//签名使用
     ];
 
