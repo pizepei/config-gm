@@ -129,11 +129,11 @@ class InitializeConfig
      * @param $path
      * @param $namespace
      */
-    public function set_config($name,$data,$path,$namespace = '')
+    public function set_config($name,$data,$path,$namespace = '',$title='基础配置',$date='',$time=0,$appid='')
     {
         //写入文件
         $str = '';
-        $this->set_head($str,$name,$namespace);
+        $this->set_head($str,$name,$namespace,$title,$date,$time,$appid);
         $this->set_content($data,$str);
         Func:: M('file') ::createDir($path);
         file_put_contents($path.$name.'.php',$str);
@@ -146,12 +146,17 @@ class InitializeConfig
      * @param $name
      * @param $namespace
      */
-    public function set_head(&$str,$name,$namespace)
+    public function set_head(&$str,$name,$namespace,$title,$date,$time,$appid)
     {
+        if ($date == ''){$date = date('Y-m-d H:i:s');}
+        if ($time == ''){$time = time();}
+
         $str = '<?php'.PHP_EOL;
         $str .= '/**'.PHP_EOL;
-        $str .= ' * creationTime: '.date('Y-m-d H:i:s').PHP_EOL;
-        $str .= ' * @title: 基础配置文件'.PHP_EOL;
+        $str .= ' * creationDate: '.$date.PHP_EOL;
+        $str .= ' * creationTime: '.$time.PHP_EOL;
+        $str .= ' * @title: '.$title.PHP_EOL;
+        $str .= ' * @appid: '.$appid.PHP_EOL;
         $str .= ' */'.PHP_EOL.PHP_EOL.PHP_EOL;
         if(!empty($namespace)){
             $str .= ' namespace '.$namespace.';'.PHP_EOL.PHP_EOL.PHP_EOL;
