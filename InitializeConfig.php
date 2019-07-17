@@ -12,6 +12,7 @@ namespace pizepei\config;
 
 use config\app\SetConfig;
 use pizepei\func\Func;
+use pizepei\helper\Helper;
 
 class InitializeConfig
 {
@@ -135,9 +136,8 @@ class InitializeConfig
         $str = '';
         $this->set_head($str,$name,$namespace,$title,$date,$time,$appid);
         $this->set_content($data,$str);
-        Func:: M('file') ::createDir($path);
+        Helper::file()->createDir($path);
         file_put_contents($path.$name.'.php',$str);
-        //mkdir($path.$name.'.php',0777);
     }
 
     /**
