@@ -13,6 +13,7 @@ namespace pizepei\config;
 use config\app\SetConfig;
 use pizepei\func\Func;
 use pizepei\helper\Helper;
+use pizepei\staging\App;
 
 class InitializeConfig
 {
@@ -48,6 +49,18 @@ class InitializeConfig
         'Deploy',
     ];
 
+    /**
+     * @var App|null 
+     */
+    protected $app = null;
+    /**
+     * InitializeConfig constructor.
+     * @param App $app
+     */
+    public function __construct(App $app)
+    {
+        $this->app = $app;
+    }
 
     /**
      * 获取配置
