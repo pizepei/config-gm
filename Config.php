@@ -44,7 +44,7 @@ class Config
             /**
              * 自定义define配置目录
              */
-            'define' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'define.php',
+            //'define' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'define.php',
             /**
              * 控制器return默认数据类型
              * json
@@ -152,7 +152,7 @@ class Config
             /**
              * 自定义路由保存目录
              */
-            'file_dir' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'route',
+            //'file_dir' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'route',
             /**
              * ReturnSubjoin
              */
