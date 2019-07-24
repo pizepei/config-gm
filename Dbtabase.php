@@ -114,6 +114,7 @@ class Dbtabase
          * 缓存有效期（默认的bd类缓存时间如表结构信息）单位s   0为永久
          */
         'cachePeriod'     =>30,
+        'cliSqlLog' =>false,//在cli模式下是否记录sql日志
         'safety'=>[
             /**
              * 删除过滤
