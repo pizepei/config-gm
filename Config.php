@@ -51,7 +51,10 @@ class Config
              * html
              */
             'return' => 'json',
-
+            /**
+             * json_encode 参数
+             */
+            'json_encode'=>JSON_UNESCAPED_UNICODE|JSON_UNESCAPED_SLASHES,
             /**
              *index示图入口文件（单页应用）
              */

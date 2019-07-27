@@ -126,4 +126,29 @@ class Dbtabase
         ]
     ];
 
+    const sqlSrv = [
+                // 数据库类型
+            'type'        => 'sqlsrv',
+                //数据库版本
+            'versions'    =>2018,
+                // 数据库连接DSN配置
+            'dsn'         => '',
+                // 服务器地址+端口
+            'hostname'    => '',
+                // 数据库名
+            'database'    => '',
+                // 数据库用户名
+            'username'    => 'sa',
+                // 数据库密码
+            'password'    => '',
+                // 数据库连接端口
+                // 数据库连接参数  参考资料http://php.net/manual/zh/pdo.setattribute.php
+            'params'      => [
+                \PDO::ATTR_STRINGIFY_FETCHES => false,
+                \PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE => true,
+                \PDO::MYSQL_ATTR_INIT_COMMAND=>'SET NAMES utf8',
+                \PDO::ATTR_DEFAULT_FETCH_MODE =>\PDO::FETCH_ASSOC,
+            ]
+    ];
+
 }
