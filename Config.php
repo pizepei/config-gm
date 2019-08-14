@@ -90,10 +90,7 @@ class Config
                 'route',//解释路由
                 'sql',//历史slq
                 'clientInfo',//ip信息
-                '系统开始时的内存(K)',//系统状态
-                '系统结束时的内存(KB)',
-                '系统内存峰值(KB)',
-                '执行耗时(S)',
+                'system',//系统状态
             ],
             //本服务的uuid标识（分布式时可保证不同服务之间的空间唯一）
             'uuid_identifier'=>'test-1',
