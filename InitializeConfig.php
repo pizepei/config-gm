@@ -6,7 +6,7 @@
  * Time: 16:19
  * @title 初始化配置
  */
-
+declare(strict_types=1);
 namespace pizepei\config;
 
 
@@ -185,9 +185,9 @@ class InitializeConfig
                 $str .= '    const '.$key.' = '.static::arrayToString($vla,1).';'.PHP_EOL.PHP_EOL;
             }else if(is_bool($vla)){
                 if($vla){
-                    $str .= '    const '.$key.' = '.TRUE.';'.PHP_EOL.PHP_EOL;
+                    $str .= '    const '.$key.' = TRUE;'.PHP_EOL.PHP_EOL;
                 }else{
-                    $str .= '    const '.$key.' = '.FALSE.';'.PHP_EOL.PHP_EOL;
+                    $str .= '    const '.$key.' = FALSE;'.PHP_EOL.PHP_EOL;
                 }
             }else if(is_string($vla)){
                     $str .= '    const '.$key.' = "'.$vla.'";'.PHP_EOL.PHP_EOL;
@@ -219,7 +219,7 @@ class InitializeConfig
             }else{
                 $index++;
             }
-            $maxLength = max($maxLength, strlen($key));
+            $maxLength = max($maxLength, strlen((string)$key));
         }
 
         $index = count($data);
@@ -228,9 +228,9 @@ class InitializeConfig
             $content .= str_repeat($space, $level);
             if(!is_int($key) || $assoc || $inAssoc){
                 if(is_int($key)){
-                    $content .= "$key".str_repeat(' ', $maxLength - strlen($key) + 1)."=> ";
+                    $content .= "$key".str_repeat(' ', $maxLength - strlen((string)$key) + 1)."=> ";
                 }else{
-                    $content .= "'$key'".str_repeat(' ', $maxLength - strlen($key) + 1)."=> ";
+                    $content .= "'$key'".str_repeat(' ', $maxLength - strlen((string)$key) + 1)."=> ";
                 }
             }
             if(is_array($item)){
