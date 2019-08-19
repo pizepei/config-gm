@@ -41,10 +41,7 @@ class Config
              *
              */
             'pattern' =>'exploit',
-            /**
-             * 自定义define配置目录
-             */
-            //'define' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'define.php',
+
             /**
              * 控制器return默认数据类型
              * json
@@ -146,13 +143,9 @@ class Config
              */
             'type' =>'note',
             /**
-             * 路由后缀名  比如 .html(note 注解时不可用)
+             * 自定义路由后缀在前后端完全分离时有用：nginx 配置中固定的后缀转发到后端
              */
-            'expanded' => '',
-            /**
-             * 自定义路由保存目录
-             */
-            //'file_dir' =>  '..'.DIRECTORY_SEPARATOR.__APP__.DIRECTORY_SEPARATOR.'route',
+            'postfix' =>  '.json',
             /**
              * ReturnSubjoin
              */
