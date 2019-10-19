@@ -163,12 +163,14 @@ class Config
          */
     ];
     CONST ACCOUNT =[
-      'password_regular'=>['/^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*+=?]).*$/','密码至少并且6位且必须包含大小写字母和特殊字符 !@#$%^&*+=?'],//密码正则表达式
-      'number_count'=>20,//会员编号参数
-      'algo'=>PASSWORD_BCRYPT,//password_hash 参数
-      'options'=>['cost'=>11],//password_hash 参数
-      'user_logon_token_salt_count'=>22,//logon_token_salt 长度
-      'logon_token_salt'=>'si8934jfk08343*%wew#jj12@99sidjxjc#$lksjd^&*',
+        'password_regular'=>['/^.*(?=.{6,})(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#$%^&*+=?]).*$/','密码至少并且6位且必须包含大小写字母和特殊字符 !@#$%^&*+=?'],//密码正则表达式
+        'number_count'=>20,//会员编号参数
+        'algo'=>PASSWORD_BCRYPT,//password_hash 参数
+        'options'=>['cost'=>11],//password_hash 参数
+        'user_logon_token_salt_count'=>22,//logon_token_salt 长度
+        'logon_token_salt'=>'si8934jfk08343*%wew#jj12@99sidjxjc#$lksjd^&*',
+        'GET_ACCESS_TOKEN_NAME'       => 'access-token',
+        'HEADERS_ACCESS_TOKEN_NAME'   => 'HTTP_ACCESS_TOKEN',
     ];
     /**
      * API配置
