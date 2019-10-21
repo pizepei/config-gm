@@ -20,6 +20,16 @@ class Deploy
     CONST toLoadConfig = 'ConfigCenter';
 
     /**
+     * 部署时后端的nginx 转发路由标识
+     */
+    const MODULE_PREFIX = 'normative';
+    /**
+     * 部署时的  公共前端资源    nginx 转发路由标识
+     */
+    const VIEW_RESOURCE_PREFIX = 'resource';
+
+
+    /**
      * 是否调试模式
      */
     CONST __EXPLOIT__ = 1;
