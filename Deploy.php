@@ -13,11 +13,15 @@ namespace pizepei\config;
 class Deploy
 {
     /**
+     * 项目标识 用来在模块中区分项目、在微服务中区分服务、权限结合时的标识
+     */
+    const PROJECT_ID = 'normative';
+    /**
      * 获取配置的方式
      * ConfigCenter   远程配置中心
      * Local   本地配置
      */
-    CONST toLoadConfig = 'ConfigCenter';
+    const toLoadConfig = 'ConfigCenter';
 
     /**
      * 部署时后端的nginx 转发路由标识
