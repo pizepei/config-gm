@@ -16,6 +16,15 @@ class Deploy
      * 项目标识 用来在模块中区分项目、在微服务中区分服务、权限结合时的标识
      */
     const PROJECT_ID = 'normative';
+    
+    const Microservice = [
+        'url' =>'',//配置中心地址
+        'appid'=>'',//服务appid
+        'appSecret'=>'',//加密参数
+        'encodingAesKey'=>'',//解密参数
+        'token'=>'',//签名使用
+    ];
+
     /**
      * 获取配置的方式
      * ConfigCenter   远程配置中心
