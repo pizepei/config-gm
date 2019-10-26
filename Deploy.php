@@ -17,12 +17,13 @@ class Deploy
      */
     const PROJECT_ID = 'normative';
     
-    const Microservice = [
+    const MicroService = [
         'url' =>'',//配置中心地址
         'appid'=>'',//服务appid
         'appSecret'=>'',//加密参数
         'encodingAesKey'=>'',//解密参数
         'token'=>'',//签名使用
+        'urlencode' => true,
     ];
 
     /**
