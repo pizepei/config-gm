@@ -16,7 +16,11 @@ class Deploy
      * 项目标识 用来在模块中区分项目、在微服务中区分服务、权限结合时的标识
      */
     const PROJECT_ID = 'normative';
-    
+    /**
+     * 服务模式对应路由中的resourceType（控制服务方式）
+     */
+    const SERVICE_PATTERN = ['api','microservice'];
+
     const MicroService = [
         'url' =>'',//配置中心地址
         'appid'=>'',//服务appid
