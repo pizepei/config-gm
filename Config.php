@@ -185,6 +185,13 @@ class Config
         ],
 
     ];
-
-
+    /**
+     * 网站信息
+     */
+    const PRODUCT_INFO = [
+        'title'=>'Lifestyle',//网站标题  比如 阿里
+        'name'=>'Lifestyle',//网站名称 比如阿里巴巴
+        'describe'=>'一个非常适合团队协作的微型框架',//网站首页介绍
+        'meta'=>'Lifestyle',//网站META关键词
+    ];
 }
