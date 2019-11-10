@@ -193,5 +193,9 @@ class Config
         'name'=>'Lifestyle',//网站名称 比如阿里巴巴
         'describe'=>'一个非常适合团队协作的微型框架',//网站首页介绍
         'meta'=>'Lifestyle',//网站META关键词
+        'extend'=>[
+            'homeLoginLay'=>'',//首页登录页面的通知弹出
+
+        ],//扩展信息
     ];
 }
