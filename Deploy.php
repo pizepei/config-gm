@@ -29,7 +29,12 @@ class Deploy
         'token'=>'',//签名使用
         'urlencode' => true,
     ];
-
+    # 当前项目的权限根信息
+    const PERMISSIONS = [
+        'title' =>'系统核心',
+        'id'    =>'normative',
+        'field' =>'normative',
+    ];
     /**
      * 获取配置的方式
      * ConfigCenter   远程配置中心
