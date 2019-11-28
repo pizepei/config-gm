@@ -13,6 +13,14 @@ namespace pizepei\config;
 class Deploy
 {
     /**
+     * 在构建时需要排除的包控制器排除依据
+     * 考虑到控制到控制器级别和命名空间的使用规范：统一使用命名空间排除
+     */
+    const EXCLUDE_PACKAGE = [
+        'bases',
+    ];
+
+    /**
      * 项目标识 用来在模块中区分项目、在微服务中区分服务、权限结合时的标识
      */
     const PROJECT_ID = 'normative';
