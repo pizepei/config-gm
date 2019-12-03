@@ -80,10 +80,11 @@ class Deploy
     /**
      * gitlb相关配置
      */
-    CONST GITLAB = [
-        'HTTP_X_GITLAB_TOKEN'=>'',//gitlab  SystemHooks TOKEN
+    const GITLAB = [
+        'OauthUrl'              =>'',
+        'AppId'                 =>'',
+        'Key'                   =>'',
     ];
-
     /**
      * 初始化配置 获取配置参数
      * 项目本身通过本配置向配置中心获取租客的配置（包括saas模式下的配置获取）
