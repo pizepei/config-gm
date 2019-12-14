@@ -137,7 +137,7 @@ class InitializeConfig
     }
 
     /**
-     * 设置配置
+     * 设置配置(写入文件)
      * @param $name
      * @param $data
      * @param $path
@@ -145,13 +145,27 @@ class InitializeConfig
      */
     public function set_config($name,$data,$path,$namespace = '',$title='基础配置',$date='',$time=0,$appid='')
     {
+        $str = $this->setConfigString($name,$data,$namespace,$title,$date,$time,$appid);
         //写入文件
-        $str = '';
-        $this->set_head($str,$name,$namespace,$title,$date,$time,$appid);
-        $this->set_content($data,$str);
         Helper::file()->createDir($path);
         file_put_contents($path.$name.'.php',$str);
     }
+
+    /**
+     * 设置配置(获取字符串)
+     * @param $name
+     * @param $data
+     * @param $path
+     * @param $namespace
+     */
+    public function setConfigString($name,$data,$namespace = '',$title='基础配置',$date='',$time=0,$appid='')
+    {
+        $str = '';
+        $this->set_head($str,$name,$namespace,$title,$date,$time,$appid);
+        $this->set_content($data,$str);
+        return $str;
+    }
+
 
     /**
      * 设置文件头部
