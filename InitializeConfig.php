@@ -204,7 +204,7 @@ class InitializeConfig
                     $str .= '    const '.$key.' = FALSE;'.PHP_EOL.PHP_EOL;
                 }
             }else if(is_string($vla)){
-                    $str .= '    const '.$key.' = "'.$vla.'";'.PHP_EOL.PHP_EOL;
+                    $str .= '    const '.$key." = '".$vla."';".PHP_EOL.PHP_EOL;
             }else if(is_int($vla)){
                 $str .= '    const '.$key.' = '.$vla.';'.PHP_EOL.PHP_EOL;
             }
