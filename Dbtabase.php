@@ -53,7 +53,7 @@ class Dbtabase
             /**
              * 是否保持长连接   是
              */
-            \PDO::ATTR_PERSISTENT => true,
+            \PDO::ATTR_PERSISTENT => false,
             /**
              *即由MySQL进行变量处理
              */
