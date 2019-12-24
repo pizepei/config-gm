@@ -12,6 +12,14 @@ namespace pizepei\config;
 
 class Deploy
 {
+
+    /**
+     * 项目环境
+     * develop  开发环境
+     * production       生产环境
+     * 考虑到安全问题  默认为production
+     */
+    const ENVIRONMENT = 'production';
     /**
      * 是否是中心项目（核心项目、账号控制中心、网站配置中心、index入口中心）
      */
