@@ -13,6 +13,7 @@ namespace pizepei\config;
 class Deploy
 {
 
+    const CDN_URL ='';
     /**
      * 项目环境
      * develop  开发环境
