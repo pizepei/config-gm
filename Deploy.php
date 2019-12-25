@@ -13,7 +13,10 @@ namespace pizepei\config;
 class Deploy
 {
 
-    const CDN_URL ='';
+    /**
+     * 是否调试模式
+     */
+    CONST __EXPLOIT__ = 1;
     /**
      * 项目环境
      * develop  开发环境
@@ -72,12 +75,11 @@ class Deploy
      * 部署时的  公共前端资源    nginx 转发路由标识
      */
     const VIEW_RESOURCE_PREFIX = 'resource';
-
-
     /**
-     * 是否调试模式
+     * cdn 配置
      */
-    CONST __EXPLOIT__ = 1;
+    const CDN_URL ='';
+
 
     /**
      * 构建服务器配置
