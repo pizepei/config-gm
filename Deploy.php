@@ -18,6 +18,12 @@ class Deploy
      */
     CONST __EXPLOIT__ = 1;
     /**
+     * 文档展示模式（非开发模式、和生产模式下使用）
+     * 1、默认 全部不展示
+     * 2、只展示微服务接口文档
+     */
+    CONST __DOCUMENT__ = '';
+    /**
      * 项目环境
      * develop  开发环境
      * production       生产环境
