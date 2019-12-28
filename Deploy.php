@@ -53,7 +53,8 @@ class Deploy
     const SERVICE_PATTERN = ['api','microservice'];
 
     const MicroService = [
-        'url' =>'',//配置中心地址
+        'url' =>'',//配置中心地址（建议使用服务ip）
+        'hostDomain'  =>'',//域名（配合ip使用） 服务端使用cdn时非常有用
         'appid'=>'',//服务appid
         'appSecret'=>'',//加密参数
         'encodingAesKey'=>'',//解密参数
