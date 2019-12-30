@@ -34,7 +34,10 @@ class Deploy
      * 是否是中心项目（核心项目、账号控制中心、网站配置中心、index入口中心）
      */
     const CENTRE_ID = 0;
-
+    /**
+     * 是否是部署主项目（一般是部署系统时需要用）
+     */
+    const DEPLOY = false;
     /**
      * 在构建时需要排除的包控制器排除依据
      * 考虑到控制到控制器级别和命名空间的使用规范：统一使用命名空间排除
@@ -121,6 +124,13 @@ class Deploy
         'encodingAesKey'=>'asdkjasdad346fk34dfsfdsf34df67455656345l',//解密参数
         'token'=>'68uijkmsd454lfgnvcv@',//签名使用
     ];
-
-
+    /**
+     * 超级管理员信息（默认是这些信息，可以使用部署系统进行覆盖)
+     * 注意:为了安全起见在部署完成后请修改密码
+     */
+    CONST SUPER_ADMIN_INFO=[
+            'phone'=>18888888888,
+            'email'=>'88888888@888.com',
+            'pasword'=>88888888,
+    ];
 }
