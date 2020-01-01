@@ -102,6 +102,16 @@ class Deploy
         'ssh2_auth'=>'password',//pubkey  or password
         'pubkey'=>'',//这里的公钥对不是必须为当前用户的
         'prikey'=>'',//
+        'WebSocketServer'=>[
+            'config'=>[
+                'ssl_cert_file' => '',
+                'ssl_key_file' => '',
+            ],
+            'hostName' => 'oauth.heil.top',
+            'host' => '0.0.0.0',
+            'port' => '9501',
+        ],
+
     ];
     /**
      * gitlb相关配置
