@@ -89,7 +89,15 @@ class Deploy
      * cdn 配置
      */
     const CDN_URL ='';
-
+    /**
+     *cdn代理端
+     * status 是否启用代理
+     * 代理服务器ip 集合  all 代表 所有
+     */
+    const CDN_AGENCY =[
+        'status'=>false,
+        'agency'=>['all'],
+    ];
 
     /**
      * 构建服务器配置
