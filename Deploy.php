@@ -91,12 +91,12 @@ class Deploy
     const CDN_URL ='';
     /**
      *cdn代理端
-     * status 是否启用代理
+     * pattern    direct 直连   cdn 官方cnd   代理 agency
      * 代理服务器ip 集合  all 代表 所有
      */
     const CDN_AGENCY =[
-        'status'=>false,
-        'agency'=>['all'],
+        'pattern'=>'direct',
+        'ip'=>['all'],
     ];
 
     /**
